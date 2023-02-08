@@ -1,13 +1,16 @@
 package hello.hellospring.domain;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
+
 import lombok.Setter;
 
-@Setter
+import javax.persistence.*;
 @Getter
-@NoArgsConstructor
+@Setter
+@Entity
 public class Member {
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 }
